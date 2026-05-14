@@ -16,6 +16,7 @@ const schedules = [
   { route: "Medan – Duri", departure: "Disesuaikan", duration: "±8 jam" },
   { route: "Medan – Dumai", departure: "Disesuaikan", duration: "±8 jam" },
   { route: "Medan – Pekanbaru", departure: "Disesuaikan", duration: "±8 jam" },
+  { route: "Medan – Lainnya", departure: "Disesuaikan", duration: "±8 jam" },
 ];
 
 const today = new Date().toISOString().split("T")[0];
