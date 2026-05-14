@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kerentravel.netlify.app/sitemap.xml
+Sitemap: https://keren-travel.vercel.app/sitemap.xml
