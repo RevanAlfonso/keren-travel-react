@@ -1,0 +1,45 @@
+{
+  "name": "keren-travel",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prerender": "react-snap"
+  },
+  "dependencies": {
+    "framer-motion": "^11.18.2",
+    "lenis": "^1.1.20",
+    "lucide-react": "^0.462.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "react-snap": "^1.23.0",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.11"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/rute",
+      "/rute/travel-medan-padang",
+      "/rute/travel-medan-bukittinggi",
+      "/rute/travel-medan-pekanbaru",
+      "/charter",
+      "/pengiriman-barang",
+      "/jadwal",
+      "/faq",
+      "/tentang",
+      "/kontak",
+      "/artikel"
+    ]
+  }
+}

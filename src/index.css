@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap");
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  font-family: "DM Sans", sans-serif;
+  background-image: radial-gradient(circle at top right, rgba(80, 138, 231, 0.22), transparent 30%),
+    radial-gradient(circle at 20% 20%, rgba(235, 193, 92, 0.16), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(30, 64, 175, 0.18), transparent 34%),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.5), rgba(2, 6, 23, 0.9));
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-4 md:px-6;
+}
+
+.glass-card {
+  @apply rounded-2xl border border-[#E7C46D]/25 bg-[#10254C]/45 backdrop-blur-xl;
+  box-shadow: 0 18px 40px -28px rgba(15, 23, 42, 0.9);
+}
+
+.glass-card-strong {
+  @apply rounded-3xl border border-[#E7C46D]/35 bg-gradient-to-b from-[#18366E]/70 to-[#0B1E3F]/80 backdrop-blur-2xl;
+  box-shadow: 0 22px 48px -24px rgba(15, 23, 42, 0.95);
+}
+
+.section-title {
+  @apply text-2xl font-semibold tracking-tight text-white md:text-4xl;
+}
+
+.section-copy {
+  @apply mt-3 text-sm leading-relaxed text-slate-300 md:text-lg;
+}
+
+.soft-line {
+  @apply border-t border-white/10;
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full border border-[#E7C46D]/35 bg-[#173A77]/45 px-3 py-1 text-xs text-[#F6E1A3];
+}
+
+.muted-label {
+  @apply text-xs uppercase tracking-[0.18em] text-[#F4D98A];
+}
+
+.page-block {
+  @apply py-10 md:py-14;
+}
+
+.hero-canvas {
+  @apply relative overflow-hidden rounded-[2rem] border border-[#E7C46D]/30 bg-gradient-to-br from-[#0E234A]/95 via-[#112E60]/90 to-[#1E417E]/70;
+  box-shadow: 0 28px 60px -32px rgba(2, 6, 23, 0.95);
+}
+
+.hero-canvas::before {
+  content: "";
+  position: absolute;
+  inset: -120px auto auto -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(147, 197, 253, 0.16);
+  filter: blur(30px);
+}
+
+.hero-canvas::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -120px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.2);
+  filter: blur(32px);
+}
+
+.kt-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 2.5rem;
+  border-bottom: 1px solid rgba(231, 196, 109, 0.28);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  background: rgba(7, 20, 43, 0.88);
+}
+
+.kt-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #e7c46d;
+  text-decoration: none;
+}
+
+.kt-logo span {
+  color: #fff;
+}
+
+.kt-nav-links-wrap {
+  display: none;
+}
+
+.kt-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.kt-nav-link {
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.kt-nav-link:hover,
+.kt-nav-link.active {
+  color: #e7c46d;
+}
+
+.kt-nav-cta {
+  background: linear-gradient(135deg, #c9a84c, #e7c46d);
+  color: #07142b;
+  font-weight: 500;
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.kt-mobile-toggle {
+  border: 1px solid rgba(231, 196, 109, 0.28);
+  border-radius: 8px;
+  padding: 0.45rem;
+  color: #e2e8f0;
+}
+
+.kt-mobile-nav {
+  padding: 0.7rem 1rem 1rem;
+  border-bottom: 1px solid rgba(231, 196, 109, 0.2);
+  display: grid;
+  gap: 0.45rem;
+  background: rgba(7, 20, 43, 0.95);
+}
+
+.kt-mobile-link,
+.kt-mobile-cta {
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  text-decoration: none;
+}
+
+.kt-mobile-link {
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kt-mobile-link.active {
+  border-color: rgba(231, 196, 109, 0.3);
+  color: #e7c46d;
+}
+
+.kt-mobile-cta {
+  background: linear-gradient(135deg, #c9a84c, #e7c46d);
+  color: #07142b;
+  font-weight: 500;
+}
+
+.kt-footer {
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid rgba(231, 196, 109, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.kt-footer-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e7c46d;
+}
+
+.kt-footer-copy {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+@media (min-width: 768px) {
+  .kt-nav-links-wrap {
+    display: block;
+  }
+
+  .kt-mobile-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .kt-nav {
+    padding: 1rem;
+  }
+
+  .kt-footer {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

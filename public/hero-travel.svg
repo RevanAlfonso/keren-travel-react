@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0B1E3F"/>
+  <rect width="1200" height="800" fill="url(#bgGlow)"/>
+  <path d="M0 560C180 500 300 520 470 560C650 605 780 640 980 590C1070 568 1130 545 1200 520V800H0V560Z" fill="#123A74"/>
+  <path d="M0 620C180 600 320 630 500 675C675 720 820 730 980 690C1080 665 1140 642 1200 620V800H0V620Z" fill="#0E2C5C"/>
+  <path d="M0 680C170 665 290 690 460 730C620 767 790 776 960 742C1070 721 1140 701 1200 684V800H0V680Z" fill="#0A2146"/>
+  <rect x="90" y="460" width="760" height="150" rx="28" fill="#F5D47A"/>
+  <rect x="120" y="492" width="310" height="62" rx="12" fill="#0E2A55"/>
+  <rect x="450" y="492" width="250" height="62" rx="12" fill="#0E2A55"/>
+  <circle cx="250" cy="622" r="56" fill="#0E2A55"/>
+  <circle cx="250" cy="622" r="26" fill="#F5D47A"/>
+  <circle cx="680" cy="622" r="56" fill="#0E2A55"/>
+  <circle cx="680" cy="622" r="26" fill="#F5D47A"/>
+  <path d="M760 460H880L960 535H760V460Z" fill="#EFC86A"/>
+  <rect x="790" y="490" width="140" height="38" rx="10" fill="#0E2A55"/>
+  <circle cx="1080" cy="164" r="56" fill="#F3CF74" fill-opacity="0.95"/>
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(940 110) rotate(126.3) scale(578.908 760.189)">
+      <stop stop-color="#2E5FAE"/>
+      <stop offset="1" stop-color="#0B1E3F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
