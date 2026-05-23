@@ -1,6 +1,0 @@
----
-pid: 24400
-cwd: |
-  C:\Users\Acer
----
-PS C:\Users\Acer>

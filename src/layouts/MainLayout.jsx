@@ -5,6 +5,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 const navLinks = [
   ["Rute", "/rute"],
   ["Charter", "/charter"],
+  ["Rental Mobil", "/rental-mobil"],
   ["Pengiriman", "/pengiriman-barang"],
   ["Jadwal", "/jadwal"],
   ["FAQ", "/faq"],

@@ -5,6 +5,7 @@ const HomePage = lazy(() => import("../pages/HomePage"));
 const RutePage = lazy(() => import("../pages/RutePage"));
 const TravelRouteDetailPage = lazy(() => import("../pages/routes/TravelRouteDetailPage"));
 const CharterPage = lazy(() => import("../pages/CharterPage"));
+const RentalMobilPage = lazy(() => import("../pages/RentalMobilPage"));
 const PengirimanBarangPage = lazy(() => import("../pages/PengirimanBarangPage"));
 const JadwalPage = lazy(() => import("../pages/JadwalPage"));
 const FaqPage = lazy(() => import("../pages/FaqPage"));
@@ -28,6 +29,7 @@ export const routes = [
       { path: "rute/:routeSlug", element: <TravelRouteDetailPage /> },
 
       { path: "charter", element: <CharterPage /> },
+      { path: "rental-mobil", element: <RentalMobilPage /> },
       { path: "pengiriman-barang", element: <PengirimanBarangPage /> },
       { path: "jadwal", element: <JadwalPage /> },
       { path: "faq", element: <FaqPage /> },

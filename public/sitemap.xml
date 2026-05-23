@@ -41,6 +41,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://keren-travel.vercel.app/rental-mobil</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://keren-travel.vercel.app/pengiriman-barang</loc>
     <priority>0.8</priority>
   </url>
