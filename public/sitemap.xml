@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://keren-travel.vercel.app/</loc>
+    <loc>https://kerentravel.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute</loc>
+    <loc>https://kerentravel.vercel.app/rute</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-padang</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-padang</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-bukittinggi</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-bukittinggi</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-pekanbaru</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-pekanbaru</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-pariaman</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-pariaman</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-payakumbuh</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-payakumbuh</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-duri</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-duri</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rute/travel-medan-dumai</loc>
+    <loc>https://kerentravel.vercel.app/rute/travel-medan-dumai</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/charter</loc>
+    <loc>https://kerentravel.vercel.app/charter</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/rental-mobil</loc>
+    <loc>https://kerentravel.vercel.app/rental-mobil</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/pengiriman-barang</loc>
+    <loc>https://kerentravel.vercel.app/pengiriman-barang</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/jadwal</loc>
+    <loc>https://kerentravel.vercel.app/jadwal</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/faq</loc>
+    <loc>https://kerentravel.vercel.app/faq</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/tentang</loc>
+    <loc>https://kerentravel.vercel.app/tentang</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/kontak</loc>
+    <loc>https://kerentravel.vercel.app/kontak</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/artikel</loc>
+    <loc>https://kerentravel.vercel.app/artikel</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/artikel/tips-mudik-aman-medan-padang</loc>
+    <loc>https://kerentravel.vercel.app/artikel/tips-mudik-aman-medan-padang</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/artikel/panduan-kirim-barang-antar-kota</loc>
+    <loc>https://kerentravel.vercel.app/artikel/panduan-kirim-barang-antar-kota</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://keren-travel.vercel.app/artikel/travel-vs-bus-antar-kota</loc>
+    <loc>https://kerentravel.vercel.app/artikel/travel-vs-bus-antar-kota</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
