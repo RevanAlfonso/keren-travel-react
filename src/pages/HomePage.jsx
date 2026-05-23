@@ -51,26 +51,44 @@ const css = `
   }
   .kt-hero-bg {
     position: absolute; inset: 0;
-    background: linear-gradient(135deg, #07142B 0%, #0A2146 45%, #0D2C5E 100%);
+    background-image: linear-gradient(to right, rgba(7, 20, 43, 0.95) 45%, rgba(7, 20, 43, 0.65) 100%), url('/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+  }
+  @media (max-width: 768px) {
+    .kt-hero-bg {
+      background-image: linear-gradient(to bottom, rgba(7, 20, 43, 0.96) 60%, rgba(7, 20, 43, 0.8) 100%), url('/hero-bg.png');
+    }
   }
   .kt-hero-grid {
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(rgba(199,168,76,.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(199,168,76,.06) 1px, transparent 1px);
+      linear-gradient(rgba(199,168,76,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(199,168,76,.04) 1px, transparent 1px);
     background-size: 60px 60px;
   }
   .kt-hero-glow {
     position: absolute; top: -120px; right: -80px;
     width: 560px; height: 560px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(199,168,76,.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(199,168,76,.1) 0%, transparent 70%);
     pointer-events: none;
   }
   .kt-hero-glow2 {
     position: absolute; bottom: -80px; left: -100px;
     width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(19,48,98,.7) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(19,48,98,.5) 0%, transparent 70%);
     pointer-events: none;
+  }
+  .kt-hero-container {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem; align-items: center;
+    width: 100%; max-width: 1200px; margin: 0 auto;
+  }
+  @media (max-width: 1024px) {
+    .kt-hero-container {
+      grid-template-columns: 1fr;
+    }
   }
   .kt-hero-content { position: relative; z-index: 2; max-width: 760px; }
 
@@ -496,6 +514,41 @@ const testimonials = [
 ];
 
 // ─── Component ───────────────────────────────────────────────────────────────
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://keren-travel.vercel.app/#organization",
+      "name": "Keren Travel",
+      "url": "https://keren-travel.vercel.app",
+      "logo": "https://keren-travel.vercel.app/logo.png",
+      "image": "https://keren-travel.vercel.app/hero-bg.png",
+      "description": "Layanan travel harian Medan ke Sumbar dan Riau, titip paket, pengiriman barang, antar dokumen, dan layanan travel nyaman terpercaya.",
+      "telephone": "0851-2912-0303",
+      "priceRange": "Rp 250.000 - Rp 450.000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Medan",
+        "addressRegion": "Sumatera Utara",
+        "addressCountry": "ID"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Medan" },
+        { "@type": "AdministrativeArea", "name": "Sumatera Barat" },
+        { "@type": "AdministrativeArea", "name": "Riau" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://keren-travel.vercel.app/#website",
+      "url": "https://keren-travel.vercel.app",
+      "name": "Keren Travel",
+      "description": "Travel Medan ke Sumatera Barat & Riau PP"
+    }
+  ]
+};
+
 export default function HomePage() {
   const stats    = trustStats    ?? defaultTrustStats;
   const services = serviceCards  ?? defaultServiceCards;
@@ -509,6 +562,8 @@ export default function HomePage() {
       <Seo
         title="Keren Travel | Travel & Titip Barang Medan ke Sumbar/Riau"
         description="Travel harian Medan ke Sumbar dan Riau. Layanan travel nyaman sekaligus titip barang, paket, dokumen, dan oleh-oleh."
+        canonical="https://keren-travel.vercel.app/"
+        jsonLd={homeJsonLd}
       />
 
       {/* ── HERO ───────────────────────────────────────────────── */}
@@ -518,42 +573,74 @@ export default function HomePage() {
         <div className="kt-hero-glow" />
         <div className="kt-hero-glow2" />
 
-        <div className="kt-hero-content">
-          <div className="kt-hero-tag kt-anim-1">
-            Travel Harian Antar Kota · Titip Barang Terpercaya
+        <div className="kt-hero-container">
+          <div className="kt-hero-content">
+            <div className="kt-hero-tag kt-anim-1">
+              Travel Harian Antar Kota · Titip Barang Terpercaya
+            </div>
+
+            <h1 className="kt-h1 kt-anim-2">
+              Perjalanan Nyaman<br />
+              dari <span className="kt-h1-accent">Medan</span> ke<br />
+              Sumbar &amp; Riau
+            </h1>
+
+            <p className="kt-hero-sub kt-anim-3">
+              Solusi harian untuk mudik, perjalanan keluarga, charter mobil, dan pengiriman paket — dalam satu layanan yang rapi dan terpercaya.
+            </p>
+
+            <div className="kt-btn-row kt-anim-4">
+              <Link to="/jadwal" className="kt-btn kt-btn-gold btn-shine">⬦ Pesan Travel</Link>
+              <Link to="/pengiriman-barang" className="kt-btn kt-btn-outline">Kirim Barang</Link>
+              <Link to="/kontak" className="kt-btn kt-btn-ghost">Hubungi Admin →</Link>
+            </div>
+
+            <div className="kt-chips kt-anim-5">
+              <span className="kt-chip">Medan ↔ Padang</span>
+              <span className="kt-chip">Medan ↔ Pekanbaru</span>
+              <span className="kt-chip">Antar Jemput</span>
+              <span className="kt-chip">Titip Barang Harian</span>
+            </div>
+
+            {/* Trust strip */}
+            <div className="kt-trust kt-anim-6">
+              {stats.map((item) => (
+                <div key={item.label}>
+                  <p className="kt-trust-label">{item.label}</p>
+                  <p className="kt-trust-value">{item.value}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <h1 className="kt-h1 kt-anim-2">
-            Perjalanan Nyaman<br />
-            dari <span className="kt-h1-accent">Medan</span> ke<br />
-            Sumbar &amp; Riau
-          </h1>
-
-          <p className="kt-hero-sub kt-anim-3">
-            Solusi harian untuk mudik, perjalanan keluarga, charter mobil, dan pengiriman paket — dalam satu layanan yang rapi dan terpercaya.
-          </p>
-
-          <div className="kt-btn-row kt-anim-4">
-            <Link to="/jadwal" className="kt-btn kt-btn-gold">⬦ Pesan Travel</Link>
-            <Link to="/pengiriman-barang" className="kt-btn kt-btn-outline">Kirim Barang</Link>
-            <Link to="/kontak" className="kt-btn kt-btn-ghost">Hubungi Admin →</Link>
-          </div>
-
-          <div className="kt-chips kt-anim-5">
-            <span className="kt-chip">Medan ↔ Padang</span>
-            <span className="kt-chip">Medan ↔ Pekanbaru</span>
-            <span className="kt-chip">Antar Jemput</span>
-            <span className="kt-chip">Titip Barang Harian</span>
-          </div>
-
-          {/* Trust strip */}
-          <div className="kt-trust kt-anim-6">
-            {stats.map((item) => (
-              <div key={item.label}>
-                <p className="kt-trust-label">{item.label}</p>
-                <p className="kt-trust-value">{item.value}</p>
+          {/* Right Column Teaser Card */}
+          <div className="hidden lg:block kt-hero-teaser kt-anim-6 animate-float" style={{ minWidth: "320px" }}>
+            <div className="glass-card-strong p-6 border border-[#E7C46D]/30 pulse-glow bg-gradient-to-b from-[#18366E]/90 to-[#0B1E3F]/95">
+              <p className="muted-label text-xs tracking-wider">Cek Rute</p>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">Rute Terpopuler</h3>
+              <div className="space-y-3">
+                <Link to="/rute/travel-medan-padang" className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-[#E7C46D]/60 hover:bg-white/[0.08] transition-all text-decoration-none">
+                  <div className="text-sm font-semibold text-white">Medan ↔ Padang</div>
+                  <span className="text-xs text-[#E7C46D]">11-13 jam →</span>
+                </Link>
+                <Link to="/rute/travel-medan-pekanbaru" className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-[#E7C46D]/60 hover:bg-white/[0.08] transition-all text-decoration-none">
+                  <div className="text-sm font-semibold text-white">Medan ↔ Pekanbaru</div>
+                  <span className="text-xs text-[#E7C46D]">8-10 jam →</span>
+                </Link>
+                <Link to="/rute/travel-medan-bukittinggi" className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-[#E7C46D]/60 hover:bg-white/[0.08] transition-all text-decoration-none">
+                  <div className="text-sm font-semibold text-white">Medan ↔ Bukittinggi</div>
+                  <span className="text-xs text-[#E7C46D]">10-12 jam →</span>
+                </Link>
               </div>
-            ))}
+              <div className="mt-5 text-center">
+                <Link to="/rute" className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E7C46D] hover:underline">
+                  Lihat Semua Rute
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -693,12 +780,25 @@ export default function HomePage() {
               </h2>
             </div>
             <div className="kt-cta-buttons">
-              <Link to="/jadwal" className="kt-btn kt-btn-gold">Cek Jadwal</Link>
+              <Link to="/jadwal" className="kt-btn kt-btn-gold btn-shine">Cek Jadwal</Link>
               <Link to="/kontak" className="kt-btn kt-btn-outline">Hubungi Admin</Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Floating WhatsApp Widget */}
+      <a
+        href="https://wa.me/6285129120303?text=Halo%20Keren%20Travel%2C%20saya%20ingin%20tanya%20jadwal%20dan%20pemesanan%20travel."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-wa pulse-glow animate-float"
+        aria-label="Hubungi WhatsApp Admin"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+        </svg>
+      </a>
 
     </>
   );
